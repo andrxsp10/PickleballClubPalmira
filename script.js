@@ -43,18 +43,18 @@ videoCards.forEach((card) => {
 
 // Cambia este número por el WhatsApp real.
 // Colombia: 57 + número
-const WHATSAPP_NUMBER = "573001112233";
+const WHATSAPP_NUMBER = "573118165675";
 
 const reserveWhatsappBtn = document.getElementById("reserveWhatsappBtn");
 
 if (reserveWhatsappBtn) {
   reserveWhatsappBtn.addEventListener("click", () => {
     const mensaje = `
-Hola, quiero hacer una reserva en Pickleball Club Palmira.
+Hola, quiero reservar en Pickleball Club Palmira.
 
-Me gustaría consultar disponibilidad, horarios y precios.
+Quisiera consultar disponibilidad de cancha, horarios disponibles, precios y opciones para jugar.
 
-Quedo atento/a para confirmar la reserva.
+Quedo atento/a para confirmar mi reserva.
     `;
 
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
