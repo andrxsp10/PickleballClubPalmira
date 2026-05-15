@@ -38,28 +38,22 @@ videoCards.forEach((card) => {
 });
 
 // =============================
-// RESERVA DIRECTA POR WHATSAPP
+// BOTÓN EASYCANCHA
 // =============================
 
-// Cambia este número por el WhatsApp real.
-// Colombia: 57 + número
-const WHATSAPP_NUMBER = "573118165675";
+const easyCanchaBtn = document.getElementById("easyCanchaBtn");
 
-const reserveWhatsappBtn = document.getElementById("reserveWhatsappBtn");
+// Aquí irá el enlace oficial de EasyCancha cuando el cliente lo entregue.
+const EASYCANCHA_URL = "";
 
-if (reserveWhatsappBtn) {
-  reserveWhatsappBtn.addEventListener("click", () => {
-    const mensaje = `
-Hola, quiero reservar en Pickleball Club Palmira.
+if (easyCanchaBtn) {
+  easyCanchaBtn.addEventListener("click", () => {
+    if (EASYCANCHA_URL) {
+      window.open(EASYCANCHA_URL, "_blank");
+      return;
+    }
 
-Quisiera consultar disponibilidad de cancha, horarios disponibles, precios y opciones para jugar.
-
-Quedo atento/a para confirmar mi reserva.
-    `;
-
-    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
-
-    window.open(whatsappURL, "_blank");
+    alert("Próximamente podrás reservar desde EasyCancha. Estamos preparando el enlace oficial.");
   });
 }
 
