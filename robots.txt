@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pickleballpalmira.com/sitemap.xml
